@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+}
+html{
+    background-color: beige;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.boton{
+    background-color: red;
+    color: white;
+    display: block;
+    margin: 20px auto;
+    padding: 15px;
+    width: 40%;
+    text-align: center;
+    text-decoration: none;
+
+}
+.boton:hover{
+    background-color: blue;
+    color: bisque;
+
+}
+.boton:active{
+    background-color: rgb(155, 134, 131);
+    color: aqua;
+}
+#p1:target{
+    background-color: blueviolet;
+}
+#p2:target{
+    background-color: rgb(71, 143, 144);
+}#p3:target{
+    background-color: blueviolet;
+}
+.text1 ,.text2{
+    width: max-content;
+    display: flex;
+    background-color: cyan;
+    padding: 10px;
+    margin: 30px auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+/* .text1 p:first-child */
+/* .text1 p:last-child */
+/* .text1 p:nth-child(3) */
+/* .text1 p:nth-child(odd) */
+/* .text1 p:nth-child(even) */
+/* .text1 p:nth-child(n+2) */
+.text1 p:nth-last-child(n+2),.text2 p:nth-last-child(n+2)
+{
+    background-color: chartreuse;
+    color: rgb(0, 0, 0);
+    
+
+}
+.tabla{
+border-collapse: collapse;
+margin: 20px auto 50px;
+
+}
+
+
+.tabla th,td{
+border: 1px solid black;
+}
+.tabla thead{
+    background-color: rgb(159, 236, 35);
+}
+.tabla tr:nth-child(odd)  td:nth-child(odd){
+color: cornflowerblue;
+}
+.nombre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 40px;
+
+}
+.nombre li{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.nombre li:nth-child(even){
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.nombre li:nth-child(odd){
+    background-color: rgb(255, 253, 253);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+.listas{
+    width: max-content;
+    margin: auto;
+    padding: 20px;
+    list-style: none;
+
+}
+.listas li::before{
+    content:"☢︎" ;
+    margin-right: 15px;
+    margin-left: 30px;
+}
+.text2 p::after{
+    content: "☢︎";
+}
+.cuadro{
+    background-color: aqua;
+    width: 60%;
+    min-width: 200px;
+    box-shadow: 6px 6px 10px silver;
+    padding: 10px;
+    margin: 40px auto;
+    position: relative;
+}
+.cuadro ::before{
+    width: 80px;
+    height: 30px;
+    content:"🟠🟡🟢";
+    position: absolute;
+    top: calc(50% - 15px);
+    right: calc(100% - 15px);
+}
+.cuadro ::after{
+    width: 80px;
+    height: 30px;
+    content:"🟠🟡🟢";
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(100% - 1px);
+}
+.red{
+    margin: 30px 50px;
+
+}
+label{
+    background-color: aqua;
+    padding: 10px;
+    color: black;
+
+}
+.red:checked + label{
+    background-color: blue;
+    color: white;
+}
